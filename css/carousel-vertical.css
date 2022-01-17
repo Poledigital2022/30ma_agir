@@ -1,0 +1,85 @@
+/**
+ * carousel vertical
+ * @version 1.0
+ * @author Simone Iannacone
+ */
+.cv-carousel {
+	display: block;
+	height: 100%;
+	z-index: 1;
+}
+.cv-carousel.cv-grab {
+	cursor: move;
+	cursor: grab;
+}
+.cv-carousel .cv-stage-outer {
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	-webkit-transform: translate3d(0, 0, 0);
+	float:right;
+	width:81%;
+}
+.cv-carousel .cv-stage {
+	transition: all 0.25s ease;
+	position: relative;
+	-ms-touch-action: pan-Y;
+	-moz-backface-visibility: hidden;
+}
+.cv-carousel,
+.cv-carousel {
+	-webkit-tap-highlight-color: transparent;
+	position: relative;
+	height:500px !important;
+	padding-top:10px !important;
+}
+.cv-carousel .cv-item,
+.cv-carousel .cv-wrapper {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+}
+.cv-carousel .cv-item {
+	min-height: 1px;
+	width: 100%;
+	-webkit-backface-visibility: hidden;
+	-webkit-touch-callout: none;
+}
+.cv-carousel.cv-drag .cv-item {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.cv-carousel.cv-drag .cv-item .item {
+	height: 100%;
+}
+.cv-nav {
+	float: right;
+	clear: left;
+	margin-left: 5px;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.cv-nav .cv-prev,
+.cv-nav .cv-next {
+	font-size: 10px;
+	margin: 5px;
+	cursor: pointer;
+	width: 22px;
+	height: 29px;
+
+}
+.cv-nav .cv-prev {
+		border-bottom: 2px solid #ffffff;
+		padding-bottom: 2px;
+}
+
+cv-item { height:70px !important;-webkit-tap-highlight-color: transparent;
+	position: relative;
+	padding-top:25px !important;}
+	@media only screen and (max-width: 1024px) {.cv-nav { display:none !important;}.cv-stage-outer{ float:none !important; margin:0 auto !important ; width:80% !important;}}
